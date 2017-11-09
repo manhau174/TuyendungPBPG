@@ -1,0 +1,419 @@
+
+.homebanner{width:1024px;min-height:450px;display:block; background-size:100% 100%; position: relative; margin:0 auto;}
+/*.homebanner a{display:block; position: absolute; width: 100%;height: 100%; z-index: 1}*/
+.homebanner .btn-createcandidate{width:100px;height:20px;display: inline-block;overflow: hidden;padding: 10px 5px;background: #ef5e9c;font-size: 12px;color: white;text-align: center;text-transform: uppercase;border: 0;font-weight: 600;cursor: pointer;position: absolute;bottom: 50px;right: 50px}
+.wrap_bn{display:block; overflow:visible; position:relative; width:100%; max-width:1170px;height:675px; margin:0 auto 60px}
+.video{position:absolute; bottom:-60px; right:0; width:550px; height:330px; padding:10px; background:white;box-shadow: 0px 3px 5px rgba(189,189,189,0.5); -webkit-box-shadow: 0px 3px 5px rgba(189,189,189,0.5); -moz-box-shadow: 0px 3px 5px rgba(189,189,189,0.5); z-index: 2;}
+.video img{display:block; width:100%; height:100%}
+.video iframe{display:block; width:100%; height:100%}
+.icon-play{background-position:-245px -210px; width:100px; height:100px; position:absolute; left:0; right:0; top:0; bottom:0; display:block; margin:auto; cursor:pointer}
+#homebanner.bannervideo {margin-bottom: 85px}
+#homebanner .videothumb {background:#FFF; width: 550px; height: 330px; padding:10px; position: absolute;bottom: -60px; right: 0; box-shadow: 0px 3px 5px rgba(189,189,189,0.5); -webkit-box-shadow: 0px 3px 5px rgba(189,189,189,0.5); -moz-box-shadow: 0px 3px 5px rgba(189,189,189,0.5); z-index: 2;}
+#homebanner .videothumb iframe {width: 100%!important; height: 100%!important;}
+#page_home .title a{
+    color: #455A64;
+    font-family: 'SFUIDisplay_Bold', sans-serif;
+    font-size: 18px;
+    margin-bottom: 15px;
+    padding: 0;
+    display: block;
+}
+#page_home{
+    margin-bottom: 30px;
+}
+.message.error{color: #df0000; font-style: italic; font-size: 12px;}
+.candidate{
+    border: 1px solid #CFD8DC;
+    -webkit-border-radius: 3px;
+    -moz-border-radius:3px;
+    border-radius: 3px;
+    padding: 16px 14px 0;
+}
+.candidate-layout{
+    display: block;
+    overflow: hidden;
+}
+.job{
+    width: 180px;
+    float: left;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+.job h3{
+    color: #455a64;
+    display: block;
+    font-family: "SFUIDisplay_Semibold",sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 18px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.job figure{
+    display: block;
+    font-size: 12px;
+    height: 32px;
+    line-height: 16px !important;
+    margin-bottom: 5px;
+    overflow: hidden;
+    color: #999;
+}
+.job .action .icon{
+    display: block;
+    font-size: 19px !important;
+    color: #90a4ae !important;
+    position: relative;
+}
+.job .action{
+    color: #90a4ae !important;
+    font-size: 13px;
+    line-height: 18px;
+}
+.job .cover{
+    border: 1px solid #eceff1;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+.job .cover img{
+    -webkit-border-radius: 3px 3px;
+    -moz-border-radius: 3px 3px;
+    border-radius: 3px 3px;
+    display: block;
+    margin-bottom: 10px;
+    height: auto !important;
+}
+.person{
+    width: 180px;
+    float: left;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+.person .cover{
+    overflow: hidden;
+    height: 180px;
+    margin-bottom: 10px;
+}
+.cover.company{
+    border: 1px solid #eceff1;
+    border-radius: 3px;
+    padding: 40px 16px;
+}
+.cover.company .box{
+    height: 100px;
+    margin: auto;
+    width: 140px;
+}
+
+.person .decs{
+    color: #999;
+    display: block;
+    font-size: 12px;
+    height: 32px;
+    line-height: 16px !important;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+.cover.company img{
+    display: block;
+    margin: 0 auto !important;
+    width: 90px !important;
+}
+.person .cover img{
+    -webkit-border-radius: 3px 3px;
+    -moz-border-radius: 3px 3px;
+    border-radius: 3px 3px;
+    display: block;
+    margin-bottom: 10px;
+    height: auto !important;
+}
+
+.person h3.title-job{
+    color: #455a64 !important;
+    display: block !important;
+    font-family: "SFUIDisplay_Semibold",sans-serif;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    height: 18px !important;
+    margin-bottom: 10px !important;
+    text-transform: none !important;
+    overflow: hidden !important;
+}
+.person h3{
+    color: #455a64;
+    display: block;
+    font-family: "SFUIDisplay_Semibold",sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 18px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+.person h3:hover{
+    color: #EE5F9D;
+}
+.person figure{
+    display: block;
+    font-size: 13px;
+    height: 32px;
+    line-height: 16px !important;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+.person figure a{
+    color: #90A4AE;
+}
+.person figure > span:after{
+    content: ' -';
+}
+.person figure > span{
+    font-family: 'SFUIDisplay_Semibold', sans-serif;
+    color: #455A64;
+    font-weight: 500;
+    display: inline-block;
+    margin-right: 2px;
+}
+.person .action .icon{
+    display: block;
+    font-size: 19px !important;
+    color: #90a4ae !important;
+    position: relative;
+}
+.person .action{
+    color: #90a4ae !important;
+    font-size: 13px;
+    line-height: 18px;
+}
+#page_home .view{
+    display: block;
+    text-align: center;
+    margin:  30px;
+}
+#page_home .icon.ca-ca-mail{
+    font-size: 23px;
+    color: #EE5F9D !important;
+    display: none !important;
+}
+#page_home .icon{
+    color: #455a64;
+    float: left;
+    font-size: 21px;
+    margin-right: 5px;
+}
+
+#page_home .icon.ca-ca-read-more{
+    margin-top: 3px;
+    font-size: 20px;
+}
+#page_home a:hover .icon, #page_home .view:hover a{
+    color: #EF5E9C;
+}
+#page_home .view a{
+    font-family: 'SFUIDisplay_Semibold', sans-serif;
+    font-size: 16px;
+    color: #455a64;
+    display: inline-block;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 0 15px;
+    font-weight: 600;
+    width: 134px;
+    height: 35px;
+    line-height: 33px;
+    border: 1px solid #DEDEDE;
+    margin-right: 12px;
+}
+#page_home .view span{
+    font-size: 16px;
+    color: #546E7A;
+}
+.marginleft{margin-left: 0 !important}
+.box-upCv{
+    background: url("../../../images/bg-img.jpg") left top no-repeat;
+    height: 240px;
+    padding-top: 40px;
+    text-align: center;
+    width: 990px;
+    margin: 39px 0px 23px;
+}
+.box-upCv .inv{
+    font-family: 'SFUIDisplay_Bold', sans-serif;
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 32px;
+}
+.box-upCv .inv2{
+    font-family: 'SFUIDisplay_Light', sans-serif;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 32px;
+}
+.box-upCv .btnupload{
+    background: #ef5e9c none repeat scroll 0 0;
+    border: 1px solid #ef5e9c;
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+    font-family: "SFUIDisplay_Semibold",sans-serif;
+    font-size: 20px !important;
+    font-weight: 600;
+    line-height: 52px;
+    padding: 0 35px;
+}
+.btnupload > .icon{
+    font-size: 28px;
+    margin-right: 10px;
+    vertical-align: middle;}
+.findjob{display:block; width:100%; overflow:visible; max-width:1140px; margin:0 auto 40px;}
+.findjob .titlejob{display:block; overflow:hidden; margin:20px auto; width:265px;}
+
+.findjob .titlejob strong{font-size:28px; color:#333; float:left; padding:12px 0 0 10px;}
+.icon-jobu{background-position:-210px 0; width:40px; height:40px; float:left}
+
+.formality{float:left; width:23.078%; overflow:hidden; background:#fff}
+.formality h3{display:block; padding:20px; overflow:hidden; line-height:1.3em; font-size:28px; color:white; font-weight:600; background:#ed5697}
+.formality h3 span{display:block}
+.formality ul{display:block; overflow:hidden; padding-bottom:15px; height:304px;}
+.formality li{display:block; overflow:hidden; position:relative}
+.formality li a{display:block; padding:12px 12px 0; font-size:14px; color:#757575}
+.formality li a:hover, .formality li a.active{color:#ed5697}
+
+.icon-arrnavright{background-position:-60px 0; width:5px; height:12px; float:left; position:absolute; top:14px; right:10px;}
+
+.viewall{display:block; overflow:hidden; width:150px; margin:30px auto 10px; font-size:14px; color:#666; text-transform:uppercase; text-align:center}
+.viewall:hover{color:#ef5e9c}
+.icon-vall{background-position:-260px 0; width:18px; height:18px; margin:-2px 6px 0 0;}
+
+#page_home .listcandidate{float:left; overflow:visible; width:76.5%;}
+#page_home .listcandidate li{float:left; width:20.286%; height:215px; background:#fff; border-left:1px solid #e5e5e5; border-bottom:1px solid #e5e5e5; overflow: hidden; position: relative;}
+#page_home .listcandidate li a{display:block; padding:10px 5px;}
+#page_home .listcandidate li img{display:block; width:100%; height:auto; margin-bottom:5px;}
+#page_home .listcandidate li h3{width: 100%; display:block; line-height:1.2em; font-size:14px; color:#757575; margin-bottom:5px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;text-transform: uppercase;}
+#page_home .listcandidate li:hover h3{color:#ef5e9c}
+#page_home .listcandidate li span{float:left; overflow:hidden; font-size:14px; color:#757575}
+#page_home .listcandidate li label{float:right; overflow:hidden}
+
+#page_home .listcandidate li.first{width:38.4%; height:440px; position:relative; border:0; margin-top:-10px;box-shadow: 4px 1px 7px rgba(189,189,189,0.7); -webkit-box-shadow: 4px 1px 7px rgba(189,189,189,0.7); -moz-box-shadow: 4px 1px 7px rgba(189,189,189,0.7);}
+#page_home .listcandidate li.first a{padding:0}
+#page_home .listcandidate li.first h3{font-size:16px; color:#414141; text-transform:uppercase; font-weight:600}
+#page_home .listcandidate li.first img{margin-bottom:0}
+#page_home .listcandidate li div{position:absolute; left:0; right:0; bottom:0; padding:10px; background:rgba(255,255,255,0.80)}
+
+
+.peoplecategory .listcandidate {
+	display: none;
+}
+.peoplecategory .listcandidate.active {
+	display: block;
+}
+
+#page_home .listcandidate li .peoplecategoryconver-1 {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    padding: 0;
+    overflow: hidden;
+}
+#page_home .listcandidate li .peoplecategoryconver-1 img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+}
+#page_home .listcandidate li .peoplecategoryconver-1 + div {
+    position: relative;
+    padding: 30px 10px;
+}
+
+#page_home .listcandidate li .peoplecategoryconver-2 {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    padding: 0;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+#page_home .listcandidate li .peoplecategoryconver-2 img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+}
+#page_home .listcandidate li .peoplecategoryconver-2 + div {
+    position: relative;
+    padding: 0px;
+}
+
+@media screen and (max-width:1200px){
+	.listcandidate li.first{width:34%; height:370px}
+	.listcandidate li.first img{height:370px}
+	.listcandidate li{height:175px}
+	.wrap_bn{height:625px}
+}
+#tabs-container{
+    overflow: hidden;
+}
+.tabs-candine {
+    display: block;
+    overflow: hidden;
+    border-bottom: 1px solid #eceff1;
+    margin-bottom: 20px;
+}
+
+.tabs-candine li {
+    border-bottom: 2px solid #fff;
+    float: left;
+    padding-bottom: 13px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.tabs-candine li.current {
+    position: relative;
+    z-index: 5;
+    border-bottom: 2px solid #EF5E9C;
+}
+
+.tabs-candine li a {
+    padding: 10px;
+    color: #455A64;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.tabs-candine .current a {
+    color: #455A64;
+    font-family: 'SFUIDisplay_Bold', sans-serif;
+}
+
+.tab {
+    width: auto;
+}
+
+.tab-content {
+    display: none;
+    width: 100%;
+}
+
+#tab-featured, #com-featured{
+    display: block;
+}
+#tab-featured .owl-prev {
+    background: rgba(0, 0, 0, 0) url("../images/iconsprite.png") no-repeat scroll -70px 0;
+    height: 65px;
+    left: -17px;
+    position: absolute;
+    width: 65px;
+}
+#tab-featured .owl-next {
+    background: rgba(0, 0, 0, 0) url("../images/iconsprite.png") no-repeat scroll -140px 0;
+    height: 65px;
+    position: absolute;
+    right: -17px;
+    width: 65px;
+}

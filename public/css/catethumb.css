@@ -1,0 +1,141 @@
+
+body#body-category{}
+body#body-category .breadcrumb{background: none;}
+body#body-category .wrap_bread{margin-top: 10px;}
+body#body-category .sort{margin-top: 0;}
+.row_head{border-bottom:1px solid #e5e5e5}
+.candidate-cover {height: 191px;margin-bottom: 10px;overflow: hidden;position: relative;}
+
+/*body#body-category .listcandidate{float:right; overflow:visible; width:82.907%;}*/
+body#body-category .listcandidate{ overflow:visible; width:100%;}
+body#body-category .listcandidate li{float:left; width:24%; height:345px; margin:0 1% 1% 0; background:#fff; border:1px solid #e5e5e5;}
+body#body-category .listcandidate li a{display:block; overflow:hidden}
+body#body-category .listcandidate li figure a{display:inline; color:#757575}
+body#body-category .listcandidate li img{width:100%; height:auto; position: absolute;top: 0;right: 0;left: 0;bottom: 0;margin: 0 auto;}
+body#body-category .listcandidate li h3{float:left; line-height:1.3em; font-size:14px; color:#757575; margin-bottom:5px; padding-left:10px;text-transform: uppercase;}
+body#body-category .listcandidate li:hover h3{color:#ef5e9c}
+body#body-category .listcandidate li span{display:block; overflow:hidden; font-size:14px; color:#757575; text-align:right; padding-right:10px}
+body#body-category .listcandidate li label{display:block; overflow:hidden; clear:both; padding-left:10px;}
+
+body#body-category .listcandidate li figure{display:block; padding:10px; font-size:13px; line-height:18px; color:#757575; font-style:italic}
+
+body#body-category .listcandidate li:hover{border:1px solid #ef5e9c}
+body#body-category .listcandidate li:hover figure{display:none}
+
+body#body-category .listcandidate li .linkcontact{display:none; overflow:hidden; padding:20px 10px 0}
+body#body-category .listcandidate li .linkcontact strong{display:inline-block; vertical-align:middle; font-size:16px; color:#f75e9c; margin-left:8px; text-transform:uppercase}
+body#body-category .listcandidate li:hover .linkcontact{display:block}
+
+
+body#body-category .listcandidate li:nth-child(4n+4){float:right; margin-right:0}
+.icon-cont{background-position:-210px -45px; width:27px; height:24px}
+
+.sort{float:right; padding:5px; margin-top:-9px; background:#fff; height:30px; position:relative; width:200px;}
+.sort span{display:block; font-size:14px; font-weight:600; color:#333; text-transform:uppercase; padding:7px 15px; text-align:right}
+.sort .list_sort{display:none; overflow:hidden; position:absolute; left:0; right:0; top:40px; box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.1); -webkit-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.1); -moz-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.1); z-index: 1;}
+.sort .list_sort a{display:block; background:white; font-size:14px; font-weight:300; color:#333; text-transform:uppercase; padding:8px 10px;}
+.sort .list_sort a:hover{background:#f8f8f8}
+.sort:hover .list_sort{display:block;}
+
+/*
+.left_cate_thumb{float:left; overflow:hidden; width:14.53%; background:white; margin-left:5px;}
+.left_cate_thumb strong{display:block; overflow:hidden; font-size:15px; color:#333; text-transform:uppercase}
+*/
+.left_cate_thumb{overflow:hidden; width:100%;}
+
+/*.categories{display:block; overflow:hidden; border-bottom:1px solid #e5e5e5; padding-bottom:10px;}*/
+.categories{display:block; overflow:hidden; padding-bottom:10px;}
+.categories li{
+	border: 1px solid #ef5e9c;
+	border-radius: 3px;
+	display: block;
+	float: left;
+	margin-right: 10px;
+	overflow: hidden;
+	padding: 0;}
+.categories li a:hover, .currentcate{
+	background: #ef5e9c;
+	color: #fff !important;
+}
+.categories li .name{display:block; font-size:14px; color:#757575; padding:10px 0; cursor:pointer}
+.categories li .name:hover{color:#333}
+
+.categories li .name b{display:none}
+.categories li .name label{display:inline-block}
+.categories li .actname{font-weight:600}
+
+.categories li .actname label{display:none}
+.categories li .actname b{display:inline-block; margin-right:5px}
+
+.categories li a{
+	color: #546e7a;
+	display: block;
+	font-size: 12px;
+	padding: 4px 10px;}
+.categories li a:hover{color:#ef5e9c}
+
+.searchprice{display:block; overflow:hidden; border-bottom:1px solid #e5e5e5;}
+
+.searchprice strong{display:block; overflow:hidden; font-size:15px; color:#333; text-transform:uppercase; margin:20px 0}
+
+.searchprice .bar_bg{display:block; height:6px; background:#bdbdbd; position:relative; margin:30px 0 20px; border-radius:10px; -webkit-border-radius:10px; -moz-border-radius:10px;}
+.searchprice .bar_scroll{display:block; height:6px; background:#f75e9c; position:absolute; left:0; right:0; width:80%; margin:auto; border-radius:10px; -webkit-border-radius:10px; -moz-border-radius:10px;}
+
+.searchprice .scroll_left{position:absolute; top:-4px; left:0; cursor:pointer;}
+.searchprice .scroll_right{position:absolute; top:-4px; right:0; cursor:pointer;}
+
+.icon-circle{background-position:-240px -160px; width:14px; height:14px}
+
+.searchprice .price{float:left; overflow:hidden; width:50%; margin-bottom:20px}
+.searchprice .price span{display:block; overflow:hidden; font-size:14px; color:#757575; margin-bottom:10px}
+.searchprice .price label{display:block; overflow:hidden; font-size:14px; color:#757575; margin-bottom:10px}
+
+.searchprice .filter{float:right; overflow:hidden; width:50%; margin-bottom:20px}
+.searchprice .filter span{display:block; overflow:hidden; font-size:14px; font-weight:600; color:#f75e9c; margin-bottom:10px; text-transform:uppercase;
+text-align:right}
+.searchprice .filter label{display:block; overflow:hidden; font-size:14px; color:#757575; margin-bottom:10px;}
+
+.age{display:block; overflow:hidden; border-bottom:1px solid #e5e5e5; padding-bottom:20px;}
+.age strong{display:block; overflow:hidden; font-size:15px; color:#333; text-transform:uppercase; margin:20px 0 10px}
+.age a{display:block; overflow:hidden; padding:10px 0 5px; font-size:14px; color:#757575;}
+.age a:hover{color:#ef5e9c}
+
+.icon-uncheck{background-position:-150px -210px; width:15px; height:15px; margin-right:5px}
+.icon-check{background-position:-166px -210px; width:15px; height:15px; margin-right:5px}
+
+.icon-stargray{background-position:0 -45px;  width:24px; height:20px; float:left; cursor:pointer}
+.icon-starpink{background-position:-32px -45px; width:24px; height:20px; float:left; cursor:pointer}
+
+.rating{display:block; overflow:hidden; border-bottom:1px solid #e5e5e5; padding-bottom:20px; margin-bottom:20px}
+
+.rating strong{display:block; overflow:hidden; font-size:15px; color:#333; text-transform:uppercase; margin:20px 0 10px}
+.wrap_star{float:left; overflow:hidden; margin:10px 0}
+.point{float:right; overflow:hidden; margin:12px 0; font-size:14px; color:#757575}
+
+.right_cate{float:right; overflow:visible; width:82.907%;}
+
+.right_cate .row_title{display:block; padding:0 0;}
+.right_cate .row_title h3{font-size:18px; color:#666; line-height:1.3em; display:inline}
+.icon-jobs{background-position:-290px -45px; width:31px; height:25px; margin-right:10px; vertical-align:bottom}
+
+.list_jobs{display:block; overflow:hidden; margin:20px 0}
+
+.list_jobs li{display:block; overflow:hidden; padding:30px; margin:5px 5px 20px 5px; border:1px solid #e5e5e5;}
+.list_jobs li h3{display:block; overflow:hidden; line-height:1.3em; color:#ef5e9c; font-size:24px;}
+.list_jobs li h3 a{display:block; overflow:hidden; line-height:1.3em; color:#ef5e9c; font-size:24px;}
+.list_jobs li h3 a:hover{color:#666}
+.list_jobs li div{display:block; overflow:hidden; font-size:14px; color:#666; margin:10px 0 0; padding:5px 0}
+.list_jobs li div strong{background:#fafafa; border:1px solid #bdbdbd; font-size:12px; padding:5px; margin-right:15px}
+.list_jobs li:hover{box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.1); -webkit-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.1); -moz-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.1);}
+
+body#body-category .listcandidate li a.btn-like, body#body-category .listcandidate li a.btn-dislike{display: inline;}
+
+body#body-category .candidate #candidate .item:first-child, body#body-category .candidate #candidate .item:nth-child(4n+1) {margin-left: 0}
+
+
+@media screen and (max-width: 1200px){
+	.categories li .name, .searchprice .filter label, .searchprice .price label{font-size:12px;}
+	.categories li a{font-size:12px}
+}
+
+
