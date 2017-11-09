@@ -12,7 +12,16 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layout.header');
+});
+Route::get('blog',function(){
+	return view('layout.welcome');
+});
+Route::get('job',function(){
+	return view('detailJob');
+});
+Route::get('pg',function(){
+	return view('detailPG');
 });
 
 Auth::routes();
