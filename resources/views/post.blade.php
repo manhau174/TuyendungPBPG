@@ -5,7 +5,7 @@
         <div class="name-title">
             <h1>Biểu mẫu đăng tin tuyển dụng</h1>
         </div>
-        <div class="backtolist"><a href="/jobposting"><i class="icon ca-ca-right-arrow"></i> Trở về danh sách</a></div>
+        <div class="backtolist"><a href="/jobposting"><i class="icon fa fa-chevron-left"></i> Trở về danh sách</a></div>
         <div id="tabs-container">
             <div id="main-profile">
                 <form action="/jobposting/update" method="POST" enctype="multipart/form-data">
@@ -108,16 +108,16 @@
                                                     <span>Lĩnh vực</span>
                                                     <div class="select-style">
                                                         <select name="fpeoplecategory" id="fpeoplecategory">
-                                                                                                        <option value="7">Bán hàng</option>
-                                                                                                        <option value="3">Diễn viên</option>
-                                                                                                        <option value="5">Hành chính</option>
-                                                                                                        <option value="8">Marketing</option>
-                                                                                                        <option value="4">MC</option>
-                                                                                                        <option value="2">Người mẫu</option>
-                                                                                                        <option value="1">PG</option>
-                                                                                                        <option value="53">Phục vụ</option>
-                                                                                                        <option value="6">Trợ lý/Thư ký</option>
-                                                                                                    </select>
+                                                        <option value="7">Bán hàng</option>
+                                                        <option value="3">Diễn viên</option>
+                                                        <option value="5">Hành chính</option>
+                                                        <option value="8">Marketing</option>
+                                                        <option value="4">MC</option>
+                                                        <option value="2">Người mẫu</option>
+                                                        <option value="1">PG</option>
+                                                        <option value="53">Phục vụ</option>
+                                                        <option value="6">Trợ lý/Thư ký</option>   
+                                                                                                                                                        >
                                                     </div>
                                                 </li>
                                                 <li id="checked"><span>Loại hình công việc</span>

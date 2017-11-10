@@ -136,25 +136,25 @@
         <div id="search" class="filtergroup w80 nomargin">
             <input type="text" id="keyword" onkeydown="this.style.color = '#333';" onclick="this.value = '';" value="Nhập từ khóa..." name="keyword">
             <button class="button-search btnsearch" type="button">
-                <i class="fa fa-search" aria-hidden="true"></i>
+                <i class="icon fa fa-search" aria-hidden="true"></i>
             </button>
         </div>
         <ul class="box-manage">
             @guest
                     <li>
                         <a id="actLogin" href="{{ route('login') }}">
-                            <i class="fa fa-sign-in" aria-hidden="true"></i> Đăng Nhập
+                            <i class="icon fa fa-sign-in" aria-hidden="true"></i> Đăng Nhập
                         </a>
                     </li>
                     <li>
                         <a id="actRegiter" href="{{ route('register') }}">
-                            <i class="fa fa-wpforms" aria-hidden="true"></i> Đăng ký
+                            <i class="icon fa fa-wpforms" aria-hidden="true"></i> Đăng ký
                         </a>
                     </li>
                   @else
                     <li><a href="http://canavi.com/profile" class="especially">{{Auth::user()->name}}</a></li>
                     <li><a href="http://canavi.com/jobposting/create" class="active"><i class="icon ca-ca-note-1"></i> Đăng tin tuyển dụng</a></li>
-                     <li><a><i class="fa fa-wpforms"></i>Tài khoản</a>
+                     <li><a><i class="icon fa fa-wpforms"></i>Tài khoản</a>
                         <ul class="sub">
                             <li><a href="http://canavi.com/profile">Chỉnh sửa</a></li>
                             <li><a href="http://canavi.com/company/manage">Trang công ty</a></li>
@@ -185,23 +185,20 @@
             <div id="nav-menu">
                 <ul>
                     <li>
-                        <i class="fa fa-home" aria-hidden="true"></i>
+                        <i class="icon fa fa-home" aria-hidden="true"></i>
                         <a href="http://canavi.com/">Trang chủ</a>
                     </li>
                     <li>
-                        <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+                        <i class="icon fa fa-plus-square-o" aria-hidden="true"></i>
                         <a href="http://canavi.com/candidate/create">Tạo hồ sơ</a>
                     </li>
+    
                     <li>
-                        <i class="icon ca-ca-fb"></i>
-                        <a href="http://canavi.com/jobsocial">Job Social</a>
-                    </li>
-                    <li>
-                        <i class="fa fa-briefcase" aria-hidden="true"></i>
+                        <i class="icon fa fa-briefcase" aria-hidden="true"></i>
                         <a href="http://canavi.com/jobposting">Việc phù hợp</a>
                     </li>
                     <li>
-                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <i class="icon fa fa-search" aria-hidden="true"></i>
                         <a href="http://canavi.com/candidate">Tìm kiếm</a>
                     </li>
                    {{--  <li>
