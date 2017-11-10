@@ -9,7 +9,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Thanh Nam</title>
+    <title>Recruitment247</title>
   {{--   <meta name="description" content="Canavi Việt Nam đặt nền móng cho tương lai nghề nghiệp tươi sáng và canavi Việt Nam tự hào là thương hiệu dẫn đầu thị trường tuyển dụng nhân sự/nhân lực cho nữ">
     <meta name="keywords" content="Canavi Việt Nam, canavi Viet Nam" />
     <meta property="fb:app_id" content="1581108608867340" />
@@ -129,7 +129,7 @@
     </script>
     <header>
         <div class="logo">
-            <a href="http://canavi.com/">
+            <a href="{{ route('home') }}">
                 <img height="37" src="http://canavi.com/templates/default/css/site/images/canavi.com.png" alt="Canavi"/>
             </a>
         </div>
@@ -139,20 +139,45 @@
                 <i class="fa fa-search" aria-hidden="true"></i>
             </button>
         </div>
-        <ul class="box-sign">
-            <li>
+        <ul class="box-manage">
+            @guest
+                    <li>
+                        <a id="actLogin" href="{{ route('login') }}">
+                            <i class="fa fa-sign-in" aria-hidden="true"></i> Đăng Nhập
+                        </a>
+                    </li>
+                    <li>
+                        <a id="actRegiter" href="{{ route('register') }}">
+                            <i class="fa fa-wpforms" aria-hidden="true"></i> Đăng ký
+                        </a>
+                    </li>
+                  @else
+                    <li><a href="http://canavi.com/profile" class="especially">{{Auth::user()->name}}</a></li>
+                    <li><a href="http://canavi.com/jobposting/create" class="active"><i class="icon ca-ca-note-1"></i> Đăng tin tuyển dụng</a></li>
+                     <li><a><i class="fa fa-wpforms"></i>Tài khoản</a>
+                        <ul class="sub">
+                            <li><a href="http://canavi.com/profile">Chỉnh sửa</a></li>
+                            <li><a href="http://canavi.com/company/manage">Trang công ty</a></li>
+                            <li><a href="http://canavi.com/wishlist">Yêu thích</a></li>
+                            <li><a href="http://canavi.com/profile/changepassword">Đổi mật khẩu</a></li>
+                            <li>
+                                <a href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                                    Đăng xuất
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                  @endguest
+            {{-- <li>
                 <a href="http://canavi.com/jobposting/create" class="active">Đăng tin tuyển dụng</a>
-            </li>
-            <li>
-                <a id="actLogin" href="http://canavi.com/login">
-                    <i class="fa fa-sign-in" aria-hidden="true"></i> Đăng Nhập
-                </a>
-            </li>
-            <li>
-                <a id="actRegiter" href="http://canavi.com/register">
-                    <i class="fa fa-wpforms" aria-hidden="true"></i> Đăng ký
-                </a>
-            </li>
+            </li> --}}
+            
         </ul>
     </header>
     <div id="column-left">
@@ -275,113 +300,17 @@
                     </li>
                     <li><a href="">Loại hình công việc</a>
                         <div class="dropdown">
-                            <div class="submenu">
-                                <h2>PG</h2>
-                                <ul class="level3">
-                                    <li><a href="http://canavi.com/pg/phat-san-pham-mau/">Phát sản phẩm mẫu</a></li>
-                                    <li><a href="http://canavi.com/pg/pg-ban-hang/">Bán hàng</a></li>
-                                    <li><a href="http://canavi.com/pg/gioi-thieu-san-pham/">Giới thiệu sản phẩm</a></li>
-                                    <li><a href="http://canavi.com/pg/khai-truong/">Khai Trương</a></li>
-                                    <li><a href="http://canavi.com/pg/chay-roadshow/">Chạy Roadshow</a></li>
-                                    <li><a href="http://canavi.com/pg/le-tan/">Lễ Tân</a></li>
-                                </ul>
-                            </div>
-                            <div class="submenu">
-                                <h2>Người mẫu</h2>
-                                <ul class="level3">
-                                    <li><a href="http://canavi.com/nguoi-mau/mau-anh-nghe-thuat/">Mẫu ảnh nghệ thuật</a></li>
-                                    <li><a href="http://canavi.com/nguoi-mau/mau-noi-y-ao-tam/">Mẫu nội y áo tắm</a></li>
-                                    <li><a href="http://canavi.com/nguoi-mau/mau-quan-ao/">Mẫu quần áo</a></li>
-                                    <li><a href="http://canavi.com/nguoi-mau/mau-giay-dep/">Mẫu giày dép</a></li>
-                                    <li><a href="http://canavi.com/nguoi-mau/mau-cap-tui-xach/">Mẫu cặp, túi xách</a></li>
-                                    <li><a href="http://canavi.com/nguoi-mau/mau-vat-dung-thiet-yeu/">Mẫu vật dụng thiết yếu</a></li>
-                                </ul>
-                            </div>
-                            <div class="submenu">
-                                <h2>Diễn viên</h2>
-                                <ul class="level3">
-                                    <li><a href="http://canavi.com/dien-vien/dien-anh/">Điện ảnh</a></li>
-                                    <li><a href="http://canavi.com/dien-vien/san-khau/">Sân khấu</a></li>
-                                    <li><a href="http://canavi.com/dien-vien/hai/">Hài</a></li>
-                                    <li><a href="http://canavi.com/dien-vien/truyen-hinh/">Truyền hình</a></li>
-                                    <li><a href="http://canavi.com/dien-vien/mua/">Múa</a></li>
-                                    <li><a href="http://canavi.com/dien-vien/dong-the/">Đóng thế</a></li>
-                                </ul>
-                            </div>
-                            <div class="submenu">
-                                <h2>MC</h2>
-                                <ul class="level3">
-                                    <li><a href="http://canavi.com/mc/mc-san-khau/">Sân khấu</a></li>
-                                    <li><a href="http://canavi.com/mc/hien-truong/">Hiện trường</a></li>
-                                    <li><a href="http://canavi.com/mc/su-kien/">Sự kiện</a></li>
-                                    <li><a href="http://canavi.com/mc/mc-truyen-hinh/">Truyền hình</a></li>
-                                </ul>
-                            </div>
-                            <div style="clear: both"></div>
-                            <div class="submenu">
-                                <h2>Hành chính</h2>
-                                <ul class="level3">
-                                    <li><a href="http://canavi.com/hanh-chinh/nhan-su/">Nhân sự</a></li>
-                                    <li><a href="http://canavi.com/hanh-chinh/ke-toan/">Kế toán</a></li>
-                                    <li><a href="http://canavi.com/hanh-chinh/van-phong/">Văn phòng</a></li>
-                                </ul>
-                            </div>
-                            <div class="submenu">
-                                <h2>Trợ lý/Thư ký</h2>
-                                <ul class="level3">
-                                    <li><a href="http://canavi.com/tro-ly-thu-ky/hoi-nghi/">Hội nghị</a></li>
-                                    <li><a href="http://canavi.com/tro-ly-thu-ky/tro-ly-thu-ky-van-phong/">Văn phòng</a></li>
-                                    <li><a href="http://canavi.com/tro-ly-thu-ky/lanh-dao/">Lãnh đạo</a></li>
-                                    <li><a href="http://canavi.com/tro-ly-thu-ky/nha-quan-ly/">Nhà quản lý</a></li>
-                                </ul>
-                            </div>
-                            <div class="submenu">
-                                <h2>Bán hàng</h2>
-                                <ul class="level3">
-                                    <li><a href="http://canavi.com/ban-hang/bao-hiem/">Bảo hiểm</a></li>
-                                    <li><a href="http://canavi.com/ban-hang/bat-dong-san/">Bất động sản</a></li>
-                                    <li><a href="http://canavi.com/ban-hang/giao-duc/">Giáo dục</a></li>
-                                    <li><a href="http://canavi.com/ban-hang/ngan-hang/">Ngân hàng</a></li>
-                                    <li><a href="http://canavi.com/ban-hang/y-te/">Y tế</a></li>
-                                    <li><a href="http://canavi.com/ban-hang/quang-cao/">Quảng cáo</a></li>
-                                    <li><a href="http://canavi.com/ban-hang/vien-thong-cong-nghe/">Viễn thông công nghệ</a></li>
-                                </ul>
-                            </div>
-                            <div class="submenu">
-                                <h2>Marketing</h2>
-                                <ul class="level3">
-                                    <li><a href="http://canavi.com/marketing/tiep-thi/">Tiếp thị</a></li>
-                                    <li><a href="http://canavi.com/marketing/truyen-thong/">Truyền thông</a></li>
-                                    <li><a href="http://canavi.com/marketing/dich-thuat/">Dịch thuật</a></li>
-                                    <li><a href="http://canavi.com/marketing/noi-dung-quang-cao/">Nội dung quảng cáo</a></li>
-                                    <li><a href="http://canavi.com/marketing/fanpage-website/">Fanpage/Website</a></li>
-                                    <li><a href="http://canavi.com/marketing/phu-trach-thuong-hieu/">Phụ trách thương hiệu</a></li>
-                                </ul>
-                            </div>
-                            <div style="clear: both"></div>
-                            <div class="submenu">
-                                <h2>Phục vụ</h2>
-                                <ul class="level3">
-                                    <li><a href="http://canavi.com/phuc-vu/nha-hang/">Nhà hàng</a></li>
-                                    <li><a href="http://canavi.com/phuc-vu/khach-san/">Khách sạn</a></li>
-                                    <li><a href="http://canavi.com/phuc-vu/tiec-cuoi/">Tiệc cưới</a></li>
-                                    <li><a href="http://canavi.com/phuc-vu/quan-cafe/">Quán Cafe</a></li>
-                                    <li><a href="http://canavi.com/phuc-vu/beer-club/">Beer Club</a></li>
-                                    <li><a href="http://canavi.com/phuc-vu/chuoi-ban-le/">Chuỗi bán lẻ</a></li>
-                                    <li><a href="http://canavi.com/phuc-vu/quan-bar/">Quán Bar</a></li>
-                                    <li><a href="http://canavi.com/phuc-vu/karaoke/">Karaoke</a></li>
-                                    <li><a href="http://canavi.com/phuc-vu/spa/">Spa</a></li>
-                                    <li><a href="http://canavi.com/phuc-vu/sieu-thi/">Siêu thị</a></li>
-                                    <li><a href="http://canavi.com/phuc-vu/fitness/">Fitness Center</a></li>
-                                    <li><a href="http://canavi.com/phuc-vu/rap-chieu-phim/">Rạp chiếu phim</a></li>
-                                    <li><a href="http://canavi.com/phuc-vu/trung-tam-thuong-mai/">Trung tâm thương mại</a></li>
-                                    <li><a href="http://canavi.com/phuc-vu/resort/">Resort</a></li>
-                                    <li><a href="http://canavi.com/phuc-vu/tiem-banh/">Tiệm bánh</a></li>
-                                    <li><a href="http://canavi.com/phuc-vu/trung-tam-giai-tri/">Trung tâm giải trí</a></li>
-                                    <li><a href="http://canavi.com/phuc-vu/pha-che/">Pha chế</a></li>
-                                    <li><a href="http://canavi.com/phuc-vu/phu-bep/">Phụ bếp</a></li>
-                                </ul>
-                            </div>
+                            @foreach (Data::getJobs() as $job)
+                                <div class="submenu">
+                                    <h2 style="color: #fd6ba9">{{$job->name}}</h2>
+                                    <ul class="level3">
+                                        @foreach (Data::getJobsContentByJob($job->id) as $jobContent)
+                                            <li><a href="http://canavi.com/pg/phat-san-pham-mau/">{{$jobContent->name}}</a></li>
+                                        @endforeach                               
+                                    </ul>
+                                </div>
+                            @endforeach
+                            
                         </div>
                     </li>
                     <li><a href="">Tính chất công việc</a>

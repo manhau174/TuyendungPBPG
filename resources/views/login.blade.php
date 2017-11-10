@@ -19,21 +19,34 @@
         </div> -->
         
         <div class="row_canavi">
-        	<span id="showlogin">Đăng nhập bằng tài khoản ThanhNam</span>
             <span class="message"></span>
-            <form action="" style="">
-                <input type="hidden" name="ftoken" id="ftoken" value="9d39a29c7bcd1b193788f132da81c9fb" />
-                <input type="hidden" name="ffrom" id="ffrom" value="" />
-                
-            	<input name="femail" id="femail" type="text" placeholder="Địa chỉ Email">
-                <input name="fpassword" id="fpassword" type="password" placeholder="Mật khẩu">
-                <a id="actForget" href="http://canavi.com/forgotpass" class="forgetpass">Quên mật khẩu?</a>
+            <form method="POST" action="{{ route('login') }}" style="">
+                {{ csrf_field() }}
+                {{-- <input type="hidden" name="ftoken" id="ftoken" value="9d39a29c7bcd1b193788f132da81c9fb" /> --}}
+                {{-- <input type="hidden" name="ffrom" id="ffrom" value="" /> --}}
+                <div class="{{ $errors->has('email') ? ' has-error' : '' }}">
+                	<input name="femail" id="femail" type="text" placeholder="Địa chỉ Email">
+                    @if ($errors->has('email'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('email') }}</strong>
+                        </span>
+                    @endif
+                </div>
+                <div class="{{ $errors->has('password') ? ' has-error' : '' }}">
+                    <input name="fpassword" id="fpassword" type="password" placeholder="Mật khẩu">
+                    @if ($errors->has('password'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('password') }}</strong>
+                        </span>
+                    @endif
+                </div>
+                <a id="actForget" href="" class="forgetpass">Quên mật khẩu?</a>
                 <button id="actbtnLogin" type="submit" class="btn-login">Đăng nhập</button>
             </form>
         </div>
         
         <div class="row_link">
-        	Bạn chưa là thành viên ThanhNam? <a id="actlinkRegiter" href="http://canavi.com/register">Đăng ký ngay</a>
+        	Bạn chưa là thành viên? <a id="actlinkRegiter" href="{{ route('register') }}">Đăng ký ngay</a>
         </div>
     </div>
     <div class="clr"></div>
