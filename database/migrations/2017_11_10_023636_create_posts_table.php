@@ -17,7 +17,7 @@ class CreatePostsTable extends Migration
             $table->increments('id');
             $table->integer('job_id');
             $table->integer('city_id');
-            $table->integer('form-work_id');
+            $table->integer('form_work_id');
             $table->integer('quantity');
             $table->string('title', 100);
             $table->string('slug', 200);

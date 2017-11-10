@@ -156,6 +156,9 @@
                     <li><a href="http://canavi.com/jobposting/create" class="active"><i class="icon ca-ca-note-1"></i> Đăng tin tuyển dụng</a></li>
                      <li><a><i class="fa fa-wpforms"></i>Tài khoản</a>
                         <ul class="sub">
+                            @if (!empty(Auth::user()))
+                                <li><a href="http://canavi.com/profile">Thông báo</a></li>
+                            @endif
                             <li><a href="http://canavi.com/profile">Chỉnh sửa</a></li>
                             <li><a href="http://canavi.com/company/manage">Trang công ty</a></li>
                             <li><a href="http://canavi.com/wishlist">Yêu thích</a></li>
@@ -302,7 +305,7 @@
                         <div class="dropdown">
                             @foreach (Data::getJobs() as $job)
                                 <div class="submenu">
-                                    <h2 style="color: #fd6ba9">{{$job->name}}</h2>
+                                    <h2><strong>{{$job->name}}</strong></h2>
                                     <ul class="level3">
                                         @foreach (Data::getJobsContentByJob($job->id) as $jobContent)
                                             <li><a href="http://canavi.com/pg/phat-san-pham-mau/">{{$jobContent->name}}</a></li>

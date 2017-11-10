@@ -26,8 +26,8 @@
                                         <li><strong>VỊ TRÍ TUYỂN DỤNG</strong>
                                             <ul class="edit-info">
                                                 <li><span class="required">Vị trí tuyển dụng</span>
-                                                    <input name="ftitle" id="ftitle" class="txt-capital" value="" placeholder="Vị trí tuyển dụng" type="text">
-                                                    <span class="warning-span">Tiêu đề sẽ không thể thay đổi sau khi tin được hiển trị trên Canavi</span>
+                                                    <input name="job_content_id" id="ftitle" class="txt-capital" value="" placeholder="Vị trí tuyển dụng" type="text">
+                                
                                                 </li>
                                                 <li>
                                                     <span>Khu vực tuyển dụng</span>
