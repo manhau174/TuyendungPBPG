@@ -26,6 +26,12 @@ Route::get('job',function(){
 Route::get('pg',function(){
 	return view('detailPG');
 });
+Route::get('create',function(){
+	return view('thongtincanhan');
+});
+Route::get('post',function(){
+	return view('post');
+});
 
 Auth::routes();
 
