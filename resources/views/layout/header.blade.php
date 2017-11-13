@@ -143,12 +143,12 @@
             @guest
                     <li>
                         <a id="actLogin" href="{{ route('login') }}">
-                            <i class="icon fa fa-sign-in" aria-hidden="true"></i> Đăng Nhập
+                            <i class="icon fa fa-sign-in" style="margin-top: 10%;" ></i> Đăng Nhập
                         </a>
                     </li>
                     <li>
                         <a id="actRegiter" href="{{ route('register') }}">
-                            <i class="icon fa fa-wpforms" aria-hidden="true"></i> Đăng ký
+                            <i class="icon fa fa-wpforms" style="margin-top: 10%;"></i> Đăng ký
                         </a>
                     </li>
                   @else
