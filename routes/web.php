@@ -26,9 +26,7 @@ Route::get('job',function(){
 Route::get('pg',function(){
 	return view('detailPG');
 });
-Route::get('create',function(){
-	return view('thongtincanhan');
-});
+Route::get('create', 'UserController@create')->name('create');
 Route::get('post',function(){
 	return view('post');
 });
