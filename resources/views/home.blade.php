@@ -10,12 +10,12 @@
                 <h1 class="inv">Trang định hướng nghề nghiệp</h1>
                 <div class="inv2">Các công việc về bán lẻ, nhà hàng, khách sạn, quán ăn</div>
 
-                <a id="actLoglink" class="btnupload" href=" @if (!empty(Auth::user()))
-                    {{ route('create') }}
+                @if (!empty(Auth::user()))
+                    <a id="actLoglink" class="btnupload" href="{{ route('create') }}"><i class="icon ca-ca-upload"></i>Cập nhật hồ sơ của bạn</a>
                 @else
-                {{ route('login') }}
-                @endif"><i class="icon ca-ca-upload"></i>Tải hồ sơ của bạn lên</a>
-    </section>
+                    <a id="actLoglink" class="btnupload" href="{{ route('login') }}"><i class="icon ca-ca-upload"></i>Tải hồ sơ của bạn lên</a>
+                @endif
+            </section>
             <section id="page_home">
                 <h2 class="title">
                     <a href="http://canavi.com/jobposting">Công việc hấp dẫn dành cho bạn</a>
