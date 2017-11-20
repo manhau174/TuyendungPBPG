@@ -31,6 +31,10 @@ Route::get('post',function(){
 	return view('post');
 });
 
+Route::get('user','UserController@getAll');
+
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

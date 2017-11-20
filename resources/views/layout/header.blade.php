@@ -16,6 +16,7 @@
     <meta property="og:image" content="http://canavi.com/templates/default/css/site/images/canavi-cover.png" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Canavi dẫn đầu tuyển dụng nhân sự cho nữ" />
+
     <meta property="og:description" content="Canavi Việt Nam đặt nền móng cho tương lai nghề nghiệp tươi sáng và canavi Việt Nam tự hào là thương hiệu dẫn đầu thị trường tuyển dụng nhân sự/nhân lực cho nữ" />
  --}}    <link rel="shortcut icon" href="/canavi.com.png">
     <link href="{{ asset('css/bootstrap.min.css') }}" type="text/css" rel="stylesheet" media="screen">
@@ -38,6 +39,8 @@
     <link href="{{ asset('css/jquery.fancybox.css') }}" type="text/css" rel="stylesheet" media="screen">
     <link href="{{ asset('css/shadowbox.css') }}" type="text/css" rel="stylesheet" media="screen">
     <script src="{{ asset('js/jquery.min.js') }}"></script>
+
+    
     <script type="text/javascript">
         var rooturl = 'http://canavi.com/';
         var delConfirm = 'Bạn có chắc chắn?';
@@ -143,17 +146,23 @@
             @guest
                     <li>
                         <a id="actLogin" href="{{ route('login') }}">
-                            <i class="icon fa fa-sign-in" aria-hidden="true"></i> Đăng Nhập
+
+                            <i class="icon fa fa-sign-in" style="margin-top: 10%;" ></i> Đăng Nhập
+
                         </a>
                     </li>
                     <li>
                         <a id="actRegiter" href="{{ route('register') }}">
-                            <i class="icon fa fa-wpforms" aria-hidden="true"></i> Đăng ký
+
+                            <i class="icon fa fa-wpforms" style="margin-top: 10%;"></i> Đăng ký
+
                         </a>
                     </li>
                   @else
                     <li><a href="http://canavi.com/profile" class="especially">{{Auth::user()->name}}</a></li>
+
                     <li><a href="{{ route('post.create') }}" class="active"><i class="icon ca-ca-note-1"></i> Đăng tin tuyển dụng</a></li>
+
                      <li><a><i class="icon fa fa-wpforms"></i>Tài khoản</a>
                         <ul class="sub">
                             @if (!empty(Auth::user()))
@@ -308,7 +317,9 @@
                                             <li><a href="http://canavi.com/pg/phat-san-pham-mau/">{{$jobContent->name}}</a></li>
                                         @endforeach                               
                                     </ul>
+                                    <div style="clear: both"></div>
                                 </div>
+
                             @endforeach
                             
                         </div>
