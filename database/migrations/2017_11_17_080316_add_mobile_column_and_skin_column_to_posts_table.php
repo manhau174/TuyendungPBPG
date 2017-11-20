@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddFormWorkColumnToUsersTable extends Migration
+class AddMobileColumnAndSkinColumnToPostsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class AddFormWorkColumnToUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('Users', function (Blueprint $table) {
+        Schema::table('posts', function (Blueprint $table) {
             //
-            $table->integer('form_work_id')->nullable();
+            $table->string('mobile', 20);
+            $table->string('skin', 200);
         });
     }
 
@@ -26,9 +27,10 @@ class AddFormWorkColumnToUsersTable extends Migration
      */
     public function down()
     {
-        Schema::table('Users', function (Blueprint $table) {
+        Schema::table('posts', function (Blueprint $table) {
             //
-            $table->dropColumn('form_work_id');
+            $table->dropColumn('mobile');
+            $table->dropColumn('skin');
         });
     }
 }

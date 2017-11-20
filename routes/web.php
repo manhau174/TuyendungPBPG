@@ -46,3 +46,8 @@ Route::prefix('admin')->group(function(){
 	Route::get('/dashboard', 'AdminController@index')->name('admin.dashboard');
 });
 
+Route::prefix('post')->group(function(){
+	Route::get('/create', 'PostController@create')->name('post.create');
+	Route::post('/store', 'PostController@store')->name('post.store');
+});
+

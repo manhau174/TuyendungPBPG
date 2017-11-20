@@ -15,7 +15,7 @@ class AddSchoolColumnToUsersTable extends Migration
     {
         Schema::table('Users', function (Blueprint $table) {
             //
-            $table->string('school', 100);
+            $table->string('school', 100)->nullable();
         });
     }
 

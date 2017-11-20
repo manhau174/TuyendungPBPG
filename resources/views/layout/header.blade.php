@@ -18,26 +18,26 @@
     <meta property="og:title" content="Canavi dẫn đầu tuyển dụng nhân sự cho nữ" />
     <meta property="og:description" content="Canavi Việt Nam đặt nền móng cho tương lai nghề nghiệp tươi sáng và canavi Việt Nam tự hào là thương hiệu dẫn đầu thị trường tuyển dụng nhân sự/nhân lực cho nữ" />
  --}}    <link rel="shortcut icon" href="/canavi.com.png">
-    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" media="screen">
-    <link href="css/font-awesome.min.css" type="text/css" rel="stylesheet" media="screen">
-    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="screen">
-    <link href="css/bootstrap-grid.min.css" type="text/css" rel="stylesheet" media="screen">
-    <link href="css/bootstrap-reboot.min.css" type="text/css" rel="stylesheet" media="screen">
-    <link href="css/global.css" type="text/css" rel="stylesheet" media="screen">
-    <link href="css/carousel.css" type="text/css" rel="stylesheet" media="screen">
-    <link href="css/login.css" type="text/css" rel="stylesheet" media="screen">
-    <link href="css/register.css" type="text/css" rel="stylesheet" media="screen">
-    <link href="css/profile.css" type="text/css" rel="stylesheet" media="screen">
-    <link href="css/select2.min.css" type="text/css" rel="stylesheet" media="screen">
-    <link href="css/contact.css" type="text/css" rel="stylesheet" media="screen">
-    <link href="css/catethumb.css" type="text/css" rel="stylesheet" media="screen">
-    <link href="css/home.css" type="text/css" rel="stylesheet" media="screen">
-    <link href="css/news.css" type="text/css" rel="stylesheet" media="screen">
-    <link href="css/activity.css" type="text/css" rel="stylesheet" media="screen">
-    <link href="css/animations.min.css" type="text/css" rel="stylesheet" media="screen">
-    <link href="css/jquery.fancybox.css" type="text/css" rel="stylesheet" media="screen">
-    <link href="css/shadowbox.css" type="text/css" rel="stylesheet" media="screen">
-    <script src="/js/jquery.min.js"></script>
+    <link href="{{ asset('css/bootstrap.min.css') }}" type="text/css" rel="stylesheet" media="screen">
+    <link href="{{ asset('css/font-awesome.min.css') }}" type="text/css" rel="stylesheet" media="screen">
+    <link href="{{ asset('css/bootstrap.css') }}" type="text/css" rel="stylesheet" media="screen">
+    <link href="{{ asset('css/bootstrap-grid.min.css') }}" type="text/css" rel="stylesheet" media="screen">
+    <link href="{{ asset('css/bootstrap-reboot.min.css') }}" type="text/css" rel="stylesheet" media="screen">
+    <link href="{{ asset('css/global.css') }}" type="text/css" rel="stylesheet" media="screen">
+    <link href="{{ asset('css/carousel.css') }}" type="text/css" rel="stylesheet" media="screen">
+    <link href="{{ asset('css/login.css') }}" type="text/css" rel="stylesheet" media="screen">
+    <link href="{{ asset('css/register.css') }}" type="text/css" rel="stylesheet" media="screen">
+    <link href="{{ asset('css/profile.css') }}" type="text/css" rel="stylesheet" media="screen">
+    <link href="{{ asset('css/select2.min.css') }}" type="text/css" rel="stylesheet" media="screen">
+    <link href="{{ asset('css/contact.css') }}" type="text/css" rel="stylesheet" media="screen">
+    <link href="{{ asset('css/catethumb.css') }}" type="text/css" rel="stylesheet" media="screen">
+    <link href="{{ asset('css/home.css') }}" type="text/css" rel="stylesheet" media="screen">
+    <link href="{{ asset('css/news.css') }}" type="text/css" rel="stylesheet" media="screen">
+    <link href="{{ asset('css/activity.css') }}" type="text/css" rel="stylesheet" media="screen">
+    <link href="{{ asset('css/animations.min.css') }}" type="text/css" rel="stylesheet" media="screen">
+    <link href="{{ asset('css/jquery.fancybox.css') }}" type="text/css" rel="stylesheet" media="screen">
+    <link href="{{ asset('css/shadowbox.css') }}" type="text/css" rel="stylesheet" media="screen">
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script type="text/javascript">
         var rooturl = 'http://canavi.com/';
         var delConfirm = 'Bạn có chắc chắn?';
@@ -153,7 +153,7 @@
                     </li>
                   @else
                     <li><a href="http://canavi.com/profile" class="especially">{{Auth::user()->name}}</a></li>
-                    <li><a href="http://canavi.com/jobposting/create" class="active"><i class="icon ca-ca-note-1"></i> Đăng tin tuyển dụng</a></li>
+                    <li><a href="{{ route('post.create') }}" class="active"><i class="icon ca-ca-note-1"></i> Đăng tin tuyển dụng</a></li>
                      <li><a><i class="icon fa fa-wpforms"></i>Tài khoản</a>
                         <ul class="sub">
                             @if (!empty(Auth::user()))
