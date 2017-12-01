@@ -39,8 +39,18 @@
     <link href="{{ asset('css/jquery.fancybox.css') }}" type="text/css" rel="stylesheet" media="screen">
     <link href="{{ asset('css/shadowbox.css') }}" type="text/css" rel="stylesheet" media="screen">
     <script src="{{ asset('js/jquery.min.js') }}"></script>
-
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.min.css">
     
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+
+    <script>
+      $( function() {
+        $( "#datepicker" ).datepicker({
+            format: 'dd-mm-yyyy'
+        });
+      } );
+    </script>
     <script type="text/javascript">
         var rooturl = 'http://canavi.com/';
         var delConfirm = 'Bạn có chắc chắn?';
@@ -159,7 +169,7 @@
                         </a>
                     </li>
                   @else
-                    <li><a href="http://canavi.com/profile" class="especially">{{Auth::user()->name}}</a></li>
+                    <li><a href="{{ route('user.profile') }}" class="especially">{{Auth::user()->name}}</a></li>
 
                     <li><a href="{{ route('post.create') }}" class="active"><i class="icon ca-ca-note-1"></i> Đăng tin tuyển dụng</a></li>
 
@@ -167,6 +177,7 @@
                         <ul class="sub">
                             @if (!empty(Auth::user()))
                                 <li><a href="http://canavi.com/profile">Thông báo</a></li>
+                                <li><a href="{{ route('post.list') }}">Bài đăng</a></li>
                             @endif
                             <li><a href="http://canavi.com/profile">Chỉnh sửa</a></li>
                             <li><a href="http://canavi.com/company/manage">Trang công ty</a></li>

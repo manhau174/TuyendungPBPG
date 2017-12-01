@@ -53,5 +53,15 @@ Route::prefix('admin')->group(function(){
 Route::prefix('post')->group(function(){
 	Route::get('/create', 'PostController@create')->name('post.create');
 	Route::post('/store', 'PostController@store')->name('post.store');
+	Route::get('/list', 'PostController@list')->name('post.list');
+	Route::get('/{slug}', 'PostController@detail')->name('post.detail');
+	
 });
 
+Route::prefix('user')->group(function(){
+	Route::get('/profile', 'UserController@profile')->name('user.profile');
+	Route::post('/update', 'UserController@update')->name('user.update');
+	// Route::get('/list', 'PostController@list')->name('post.list');
+	// Route::get('/{slug}', 'PostController@detail')->name('post.detail');
+	
+});

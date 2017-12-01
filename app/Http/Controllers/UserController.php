@@ -9,9 +9,9 @@ use App\User;
 class UserController extends Controller
 {
     //
-    public function create() {
+    public function profile() {
     	$cities = City::all();
-    	return view('thongtincanhan', compact('cities'));
+    	return view('user.profile', compact('cities'));
 
     }
     public function getAll(){
@@ -19,5 +19,9 @@ class UserController extends Controller
 		dd($users);
 		return view('home', ['users' => $users]);
 	}
+    public function update(Request $request) {
+        $data = $request->all();
+        dd($data);
+    }
 }
 

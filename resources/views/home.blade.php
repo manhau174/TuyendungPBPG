@@ -12,7 +12,7 @@
 
 
                 @if (!empty(Auth::user()))
-                    <a id="actLoglink" class="btnupload" href="{{ route('create') }}"><i class="icon fa fa-upload"></i>Cập nhật hồ sơ của bạn</a>
+                    <a id="actLoglink" class="btnupload" href="{{ route('user.profile') }}"><i class="icon fa fa-upload"></i>Cập nhật hồ sơ của bạn</a>
                 @else
                     <a id="actLoglink" class="btnupload" href="{{ route('login') }}"><i class="icon fa fa-upload"></i>Tải hồ sơ của bạn lên</a>
                 @endif
@@ -23,31 +23,44 @@
 
             <section id="page_home">
                 <h2 class="title">
-                    <a href="http://canavi.com/jobposting">Công việc hấp dẫn dành cho bạn</a>
+                    <a href="">Tất cả công việc</a>
                 </h2>
                 <div id="candine" class="candidate">
+                
+                    
+                
                     <div id="tabs-container">
                         <div class="jobs-list">
-                            <div class="job-item marginleft ">
+                            @foreach (Data::getPosts() as $post)
+                            {{-- start item --}}
+                            <div class="job-item ">
                                 <div class="image">
                                     <figure>
-                                        <a href="http://canavi.com/jobposting/cong-ty-tnhh-thuong-mai-son-duong-nhan-vien-le-tan-ha-noi-740" title="Công Ty Tnhh Thương Mại Sơn Dương  - Nhân viên lễ tân - Hà Nội"></a>
+                                        <a href="" title="{{$post->title}}" ></a>
                                     </figure>
                                 </div>
                                 <div class="job-desc">
-                                    <a href="http://canavi.com/jobposting/cong-ty-tnhh-thuong-mai-son-duong-nhan-vien-le-tan-ha-noi-740" title="Công Ty Tnhh Thương Mại Sơn Dương  - Nhân viên lễ tân - Hà Nội"></a>
-                                        <h3 class="title-job">Công Ty Tnhh Thương Mại Sơn Dương - Nhân viên lễ tân - Hà Nội</h3>
+                                    <a href="{{ route('post.detail', ['slug' => $post->slug]) }}">
+                                        <h3 class="title-job">{{$post->title}}</h3>
                                     </a>
-                                    <div class="description">- Làm thủ tục Checkin, Checkout cho khách - Tiếp nhận và trả lời tất cả các cuộc gọi khác liên hệ đến - Giải quyết than phiền của khách trong quá trình lưu trú. - Các công việc khác có liên quan đến bộ phận lễ tân</div>
+                                    <div class="description">{{$post->description}}</div>
                                     <div class="action">
                                         <i class="icon fa fa-eye"></i>6
                                     </div>
-                                </div>
+                                </div>                              
                             </div>
+                            {{-- end item --}}
+                            @endforeach
                         </div>
-                    </div>
-                    <div class="view"><a href="http://canavi.com/jobposting"><i class="fa fa-chevron-circle-right"> &nbsp;</i>Xem thêm</a></div>
+                    
+                    
+                
                 </div>
+
+
+                    <div class="view"><a href=""><i class="fa fa-chevron-circle-right"> &nbsp;</i>Xem thêm</a></div>
+                </div>
+
 
             </section>
             <section id="page_home">

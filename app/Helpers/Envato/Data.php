@@ -18,6 +18,9 @@ class Data {
 		return DB::table('cities')->get();
 
 	}
+	public static function getPosts() {
+		return DB::table('posts')->get();
+	}
 }
 
  ?>
