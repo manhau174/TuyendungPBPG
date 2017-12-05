@@ -41,13 +41,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::prefix('admin')->group(function(){
-	Route::get('/', function(){return view('admin.adminWelcome');})->name('admin.home');
+	Route::get('/', function(){return view('admin.adminWelcome');})->name('admin.dashboard');
 	Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
 	Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
 	Route::post('/logout', 'Auth\AdminLoginController@logout')->name('admin.logout.submit');
 	Route::get('/register', 'Auth\AdminRegisterController@showRegisterForm')->name('admin.register');
 	Route::post('/register', 'Auth\AdminRegisterController@register')->name('admin.register.submit');
-	Route::get('/dashboard', 'AdminController@index')->name('admin.dashboard');
+	// Route::get('/dashboard', 'Auth\AdminController@index')->name('admin.dashboard');
 });
 
 Route::prefix('post')->group(function(){
@@ -60,8 +60,9 @@ Route::prefix('post')->group(function(){
 
 Route::prefix('user')->group(function(){
 	Route::get('/profile', 'UserController@profile')->name('user.profile');
-	Route::post('/update', 'UserController@update')->name('user.update');
-	// Route::get('/list', 'PostController@list')->name('post.list');
+	Route::post('/update/{id}', 'UserController@update')->name('user.update');
+	Route::get('/preview/{slug}', 'UserController@preview')->name('user.preview');
 	// Route::get('/{slug}', 'PostController@detail')->name('post.detail');
 	
 });
+Route::get('/{job_slug}/{job_content_slug}', 'FillController@fill')->name('fill');

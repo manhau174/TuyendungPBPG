@@ -29,7 +29,7 @@
                   <figure>
                      <span>
                      <img id="cover-image" class="jobs pointer" src="http://canavi.com/templates/default/css/site/images/noimage.png" alt="Cover image" title="Cover Image">
-                     <input id="fcover" type="file" name="fcover" class="collapse">
+                     <input id="fcover" type="file" name="avatar" class="collapse">
                      </span>
                   </figure>
                </div>
@@ -229,6 +229,7 @@
                      </div>
                   </div>
                </div>
+               
             </form>
          </div>
       </div>

@@ -1,14 +1,16 @@
+
 @extends('layout.header')
+<script type="text/javascript" src="{{ asset('ckeditor/ckeditor.js') }}"></script>
 @section('content')
 <div id="pagefr">
    <section id="page_profile">
       <h1 class="name">{{Auth::user()->name}}</h1>
-      <div class="eidtpage" style="font-size: 12px;">Link profile của bạn: <a target="_blank" href="http://canavi.com/candidate/nam-lemon-25409?preview=1" style="color: #ef5e9c;">http://canavi.com/candidate/nam-lemon-25409?preview=1</a></div>
+      <div class="eidtpage" style="font-size: 12px;">Link profile của bạn: <a target="_blank" href="{{route('user.preview',['slug' => Auth::user()->slug])}}" style="color: #ef5e9c;">{{route('user.preview',['slug' => Auth::user()->slug])}}</a></div>
       <div id="tabs-container">
          <ul class="tabs-people">
             <li class="current"><a href="#tab-profile">Thông tin</a></li>
          </ul>
-         <form action="{{ route('user.update') }}" method="POST" role="form">
+         <form action="{{ route('user.update', Auth::user()->id) }}" method="POST" role="form">
             {{csrf_field()}}
             <div id="main-profile" class="posting-thumb">
                <div id="column-profile">
@@ -17,7 +19,7 @@
                      <img src="{{ asset('images/avatar.jpg') }}" alt="Ảnh đại diện">
                      </span>
                   </figure>
-                  <input type="file" name="cover" id="filecover" class="collapse">
+                  <input type="file" name="avatar" id="filecover" class="collapse">
                   <div class="title-cover">Cập nhật ảnh đại diện</div>
                </div>
                <div id="column-info">
@@ -31,7 +33,7 @@
                                  <strong>CÁ NHÂN</strong>
                                  <ul class="edit-info">
                                     <li><span>Năm sinh (dd/mm/yyyy)</span>
-                                       <input type="text" name="deadline" id="datepicker" placeholder="">
+                                       <input type="text" name="birthday" id="datepicker" placeholder="" value="{{Auth::user()->birthday}}">
                                     </li>
                                     <!--<li><span>Tuổi</span>
                                        <div class="select-style">
@@ -69,16 +71,28 @@
                                     </li>
                                  </ul>
                               </li>
+                              
                            </ul>
+                           
                            <ul class="edit">
                               <li>
                                  <strong>LIÊN HỆ</strong>
                                  <ul class="edit-info">
                                     <li><span>Email <i style="color: #DB4F8A; font-style: normal">(*)</i></span>
-                                       <input type="text" name="email" id="femail" value="" placeholder="{{Auth::user()->email}}" readonly="">
+                                       <input type="text" name="email" id="femail" value="{{Auth::user()->email}}" placeholder="{{Auth::user()->email}}" readonly="">
                                     </li>
                                     <li><span>Số điện thoại <i style="color: #DB4F8A; font-style: normal">(*)</i></span>
-                                       <input type="text" onkeypress="return isNumberKey(event)" maxlength="11" name="mobile" id="fdienthoai" value="" placeholder="Số điện thoại liên hệ">
+                                       <input type="text" onkeypress="return isNumberKey(event)" maxlength="11" name="mobile" id="fdienthoai" value="{{Auth::user()->mobile}}">
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
+                           <ul class="edit">
+                              <li>
+                                 <strong>ĐỊA CHỈ</strong>
+                                 <ul class="edit-info">
+                                    <li>
+                                       <input type="text" name="address" value="{{Auth::user()->address}}">
                                     </li>
                                  </ul>
                               </li>
@@ -95,10 +109,12 @@
                                     <li>
                                        <span>Loại hình công việc</span>
                                        <div class="select-style">
-                                          <select name="job_id"    >
+                                          <select name="job_id">
                                              <option value="0">-- Chọn danh mục --</option>
                                              @foreach (Data::getJobs() as $job)
-                                             <option value="{{$job->id}}">{{$job->name}}</option>
+                                             <option value="{{$job->id}}"
+                                             
+                                                >{{$job->name}}</option>
                                              {{-- @foreach (Data::getJobsContentByJob($job->id) as $jobContent)
                                              <option value="{{$jobContent->id}}">|--{{$jobContent->name}}</option>
                                              @endforeach    --}}                            
@@ -146,7 +162,7 @@
                                  </li>
                                  <li>
                                     <span>Trường</span>
-                                    <input type="text" name="school" id="ftruong" value="">
+                                    <input type="text" name="school" id="ftruong" value="{{Auth::user()->school}}">
                                  </li>
                               </ul>
                            </li>
@@ -161,7 +177,7 @@
                               <ul class="edit-info">
                                  <li>
                                     <span>Công việc làm gần đây</span>
-                                    <textarea name="fcongviecganday" id="fcongviecganday" rows="5"></textarea>
+                                    <textarea name="exp" id="exp" rows="5" class="ckeditor">{{Auth::user()->exp}}</textarea>
                                  </li>
                               </ul>
                            </li>
@@ -178,6 +194,7 @@
                            </li>
                            </ul>-->
                      </div>
+                     
                      {{-- 
                      <div class="box-info row_profile" style="padding: 15px 0 5px 5px;">
             }
@@ -217,6 +234,10 @@
 <link href="http://canavi.com/templates/default/css/site/desktop/dropzone.css" rel="stylesheet">
 <script src="http://canavi.com/templates/default/js/site/dropzone.js"></script>
 </div>
+<script type="text/javascript">
+   CKEDITOR.replace('exp');
+</script>
 @endsection
 @section('footer')
+@include('layout.footer')
 @endsection

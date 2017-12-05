@@ -169,17 +169,16 @@
                         </a>
                     </li>
                   @else
-                    <li><a href="{{ route('user.profile') }}" class="especially">{{Auth::user()->name}}</a></li>
-
+                    
                     <li><a href="{{ route('post.create') }}" class="active"><i class="icon ca-ca-note-1"></i> Đăng tin tuyển dụng</a></li>
 
-                     <li><a><i class="icon fa fa-wpforms"></i>Tài khoản</a>
+                     <li><a><i class="icon fa fa-wpforms"></i>{{Auth::user()->name}}</a>
                         <ul class="sub">
                             @if (!empty(Auth::user()))
                                 <li><a href="http://canavi.com/profile">Thông báo</a></li>
                                 <li><a href="{{ route('post.list') }}">Bài đăng</a></li>
                             @endif
-                            <li><a href="http://canavi.com/profile">Chỉnh sửa</a></li>
+                            <li><a href="{{ route('user.profile') }}">Chỉnh sửa</a></li>
                             <li><a href="http://canavi.com/company/manage">Trang công ty</a></li>
                             <li><a href="http://canavi.com/wishlist">Yêu thích</a></li>
                             <li><a href="http://canavi.com/profile/changepassword">Đổi mật khẩu</a></li>
@@ -256,39 +255,6 @@
                     </li>
                 </ul>
             </div>
-            <div id="coppyright">
-                <ul>
-                    <li>
-                        <strong>Công ty cổ phần truyền thông Canavi Việt Nam</strong>
-                    </li>
-                    <li>MST: 0313503259</li>
-                    <li>
-                        <strong>Hồ Chí Minh: </strong>Tầng 4, tòa Lữ Gia Plaza, số 70 Lữ Gia, phường 15, quận 11, TP.Hồ Chí Minh
-                    </li>
-                    <li>
-                        <strong>Hà Nội: </strong>Số 98 phố Hoàng Ngân, phường Trung Hoà, quận Cầu Giấy, Hà Nội.
-                    </li>
-                    <li>
-                        <strong>Điện thoại:</strong> 0873.066.883
-                    </li>
-                    <li>
-                        <strong>Hotline:</strong> 0908.265.465
-                    </li>
-                    <li>
-                        <strong>Email:</strong> canavi.vn@gmail.com
-                    </li>
-                </ul>
-                <div>
-                    <a href="http://online.gov.vn/WebsiteDisplay.aspx?DocId=28450" target="_blank">
-                        <img src="http://canavi.com/uploads/web/Pages/dadangky.png" alt="Canavi - Bo cong thuong" width="120" />
-                    </a>
-                </div>
-                <p style="font-size: 11px;">
-                    <em> Giấy phép Mạng Xã Hội số 
-                    <strong>571/GP-BTTTT</strong> do Bộ Thông Tin Truyền Thông cấp ngày 15/12/2016. 
-                    </em>
-                </p>
-            </div>
             <div class="linefollow"></div>
             <!--  <div id="menu-foo">
                 <strong>Liên kết</strong>
@@ -325,7 +291,7 @@
                                     <h2><strong>{{$job->name}}</strong></h2>
                                     <ul class="level3">
                                         @foreach (Data::getJobsContentByJob($job->id) as $jobContent)
-                                            <li><a href="http://canavi.com/pg/phat-san-pham-mau/">{{$jobContent->name}}</a></li>
+                                            <li><a href="{{ route('fill', ['job_slug' => $job->slug, 'job_content_slug' => $jobContent->slug] )}}">{{$jobContent->name}}</a></li>
                                         @endforeach                               
                                     </ul>
                                     <div style="clear: both"></div>

@@ -1,4 +1,7 @@
+{{dd($posts)}}
     {{-- @extends('layouts. app') --}}
+}
+}
 @extends('layout.header')
 @section('content')
 <div id="pagefr">

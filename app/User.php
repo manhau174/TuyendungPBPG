@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','birthday','mobile','gender','address','city_id','job_id','form_work_id','level','school','exp','avatar','profile_images'
+        'name', 'email', 'password','birthday','mobile','gender','address','city_id','job_id','form_work_id','level','school','exp','avatar','profile_images', 'slug'
     ];
 
     /**
@@ -33,5 +33,9 @@ class User extends Authenticatable
     }
     public function post() {
         return $this->hasMany('app\Post');
+    }
+
+    public function City() {
+        return $this->belongsTo('App\City');
     }
 }
